@@ -273,3 +273,81 @@ h1 {
     color: #cc0000;
     font-weight: bold;
 }
+
+
+
+
+ table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: var(--TitleBox-BG);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--Main-BG);
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Links Styles */
+table a {
+            display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--Main-Color);
+    padding: 0 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+table a:hover {
+    background-color: #2980b9;
+}
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            table {
+                width: 100%;
+                margin: 0;
+            }
+
+            td:first-child {
+                font-weight: bold;
+            }
+
+            /* Stacking the content for smaller screens */
+            td {
+                padding: 10px;
+            }
+
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                margin-bottom: 6px;
+                color: #888;
+            }
+        }
