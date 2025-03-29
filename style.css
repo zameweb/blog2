@@ -311,7 +311,7 @@ table a {
             display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: var(--Main-Color);
+    background-color: #b51818;
     padding: 0 8px;
     border-radius: 4px;
     font-weight: bold;
