@@ -1,0 +1,341 @@
+
+<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes' name='viewport'/>
+<meta name="robots" content="noindex"/><style>body{margin:0;padding:0}#player, iframe{width:100%;height:100%;position:absolute;z-index:2;top:0;right:0;left:0;bottom:0}#video{width:100%;height:100%;position:absolute;z-index:2;top:0;right:0;left:0;bottom:0} </style>
+<div id="player"></div>
+
+<script type="text/javascript">
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    var r = getParameterByName('id');
+
+    var url = '';
+    if (r === 'hd-1') {
+       url = "https://sportzonline.ps/channels/hd/hd1.php";
+    } else if (r === 'hd-2') {
+        url = "https://sportzonline.ps/channels/hd/hd2.php";
+    } else if (r === 'hd-3') {
+        url = "https://sportzonline.ps/channels/hd/hd3.php";
+    } else if (r === 'hd-4') {
+        url = "https://sportzonline.ps/channels/hd/hd4.php";
+    } else if (r === 'hd-5') {
+        url = "https://sportzonline.ps/channels/hd/hd5.php";
+    } else if (r === 'hd-6') {
+        url = "https://sportzonline.ps/channels/hd/hd6.php";
+    } else if (r === 'hd-7') {
+       url = "https://sportzonline.ps/channels/hd/hd7.php";
+    } else if (r === 'hd-8') {
+       url = "https://sportzonline.ps/channels/hd/hd8.php";
+    } else if (r === 'hd-9') {
+        url = "https://sportzonline.ps/channels/hd/hd9.php";
+    } else if (r === 'hd-10') {
+       url = "https://sportzonline.ps/channels/hd/hd10.php";
+    } else if (r === 'hd-11') {
+       url = "https://sportzonline.ps/channels/hd/hd11.php";
+    } else if (r === 'br1') {
+        url = "https://sportzonline.ps/channels/bra/br1.php";
+    } else if (r === 'br2') {
+        url = "https://sportzonline.ps/channels/bra/br2.php";
+    }else if (r === 'br3') {
+        url = "https://sportzonline.ps/channels/bra/br3.php";
+    }else if (r === 'br4') {
+        url = "https://sportzonline.ps/channels/bra/br4.php";
+    }else if (r === 'br5') {
+        url = "https://sportzonline.ps/channels/bra/br5.php";
+    }else if (r === 'br6') {
+        url = "https://sportzonline.ps/channels/bra/br6.php";
+    }else if (r === 'br7') {
+        url = "https://sportzonline.ps/channels/bra/br7.php";
+    }else if (r === 'br8') {
+        url = "https://sportzonline.ps/channels/bra/br8.php";
+    }else if (r === 'eleven1') {
+        url = atob("aHR0cHM6Ly9zcG9ydHNvbmxpbmUuc2kvY2hhbm5lbHMvcHQvZWxldmVuMS5waHA=");
+    }else if (r === 'eleven2') {
+        url = atob("aHR0cHM6Ly9zcG9ydHNvbmxpbmUuc2kvY2hhbm5lbHMvcHQvZWxldmVuMi5waHA=");
+    }else if (r === 'eleven3') {
+        url = atob("aHR0cHM6Ly9zcG9ydHNvbmxpbmUuc2kvY2hhbm5lbHMvcHQvZWxldmVuMy5waHA=");
+    }else if (r === 'sport-tv1') {
+        url = "https://sportzonline.ps/channels/pt/sporttv1.php";
+    }else if (r === 'sport-tv2') {
+        url = "https://sportzonline.ps/channels/pt/sporttv2.php";
+    }else if (r === 'sport-tv3') {
+        url = "https://sportzonline.ps/channels/pt/sporttv3.php";
+    }else if (r === 'sport-tv4') {
+        url = "https://sportzonline.ps/channels/pt/sporttv4.php";
+    }else if (r === 'sport-tv5') {
+        url = "https://sportzonline.ps/channels/pt/sporttv5.php";
+    }else if (r === 'btv') {
+        url = atob("aHR0cHM6Ly92Mi5zcG9ydHNvbmxpbmUuc2kvY2hhbm5lbHMvcHQvYnR2LnBocA==");
+    }else if (r === 'USANETWORK') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VVNBTkVUV09SSw==");
+    }else if (r === 'NBC_Universo_ES') {
+        url = atob("aHR0cHM6Ly9zdHJlYW10cDIuY29tL2dsb2JhbDEucGhwP3N0cmVhbT11bml2ZXJzb191c2E=");
+    }else if (r === 'DAZN_LA_LIGA') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9REFaTl9MQV9MSUdB");
+    }else if (r === 'SKY_PREMIER_LEAGUE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZX1BSRU1JRVJfTEVBR1VF");
+    }else if (r === 'SKY_SPORTS_MAIN_EVENT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZX1NQT1JUU19NQUlOX0VWRU5U");
+    }else if (r === 'Sky_Sports_Calcio_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U2t5X1Nwb3J0c19DYWxjaW9fSVQ=");
+    }else if (r === 'SKY_SPORTS_UNO_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZX1NQT1JUU19VTk9fSVQ=");
+    }else if (r === 'PREMIER_SPORTS_1_IRL') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9UFJFTUlFUl9TUE9SVFNfMV9JUkw=");
+    }else if (r === 'PREMIER_SPORTS_2_IRL') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9UFJFTUlFUl9TUE9SVFNfMl9JUkw=");
+    }else if (r === 'TV2_Sport_1_NO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VFYyX1Nwb3J0XzFfTk8=");
+    }else if (r === 'BEIN_SPORTS_1_TH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QkVJTl9TUE9SVFNfMV9USA==");
+    }else if (r === 'BEIN_SPORTS_2_TH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QkVJTl9TUE9SVFNfMl9USA==");
+    }else if (r === 'BEIN_SPORTS_3_TH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QkVJTl9TUE9SVFNfM19USA==");
+    }else if (r === 'TNT_1_UK') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VE5UXzFfR0I=");
+    }else if (r === 'TNT_2_GB') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VE5UXzJfR0I=");
+    }else if (r === 'TNT_3_UK') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VE5UXzNfR0I=");
+    }else if (r === 'TNT_4_GB') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VE5UXzRfR0I=");
+    }else if (r === 'TV2_Sport_Premium_NO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VFYyX1Nwb3J0X05P");
+    }else if (r === 'SKY_251_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZXzI1MV9JVA==");
+    }else if (r === 'SKY_252_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZXzI1Ml9JVA==");
+    }else if (r === 'SKY_253_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZXzI1M19JVA==");
+    }else if (r === 'SKY_255_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZXzI1NV9JVA==");
+    }else if (r === 'SKY_256_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZXzI1Nl9JVA==");
+    }else if (r === 'CANALE_5_IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9Q0FOQUxFXzVfSVQ=");
+    }else if (r === 'CLUB_1_BE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9Q0xVQl8xX0JF");
+    }else if (r === 'VSPORTS_1_NO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VlNQT1JUU18xX05P");
+    }else if (r === 'VSPORTS_2_NO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VlNQT1JUU18yX05P");
+    }else if (r === 'VSPORTS_3_NO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VlNQT1JUU18zX05P");
+    }else if (r === 'SSC1') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U1NDMQ==");
+    }else if (r === 'SSC2') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U1NDMg==");
+    }else if (r === 'SSC_EXTRA1') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U1NDX0VYVFJBMQ==");
+    }else if (r === 'ZIGGO_SELECT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9WklHR09fU0VMRUNU");
+    }else if (r === 'ZIGGO_SPORT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9WklHR09fU1BPUlQ=");
+    }else if (r === 'HRT_2') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9SFJUXzI=");
+    }else if (r === 'ESPN_PREMIUM_CL') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9RVNQTl9QUkVNSVVNX0NM");
+    }else if (r === 'ESPN_NL') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9RVNQTl9OTA==");
+    }else if (r === 'ESPN_NL_2') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9RVNQTl9OTF8y");
+    }else if (r === 'ESPN_NL_3') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9RVNQTl9OTF8z");
+    }else if (r === 'ESPN_NL_4') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9RVNQTl9OTF80");
+    }else if (r === 'ZIGGO_VOETBAL') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9WklHR09fVk9FVEJBTA==");
+    }else if (r === 'ZIGGO_DOCU') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9WklHR09fRE9DVQ==");
+    }else if (r === 'SKY_SPORTS_FOOTBALL') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9U0tZX1NQT1JUU19GT09UQkFMTA==");
+    }else if (r === 'FOX_SPORTS') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9Rk9YX1NQT1JUUw==");
+    }else if (r === 'ESPN') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9RVNQTg==");
+    }else if (r === 'TV3PLUSNO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VFYzUExVU05P");
+    }else if (r === 'BBC1_ENG') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QkJDMV9FTkc=");
+    }else if (r === 'TV_LA_1_ES') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VFZfTEFfMV9FUw==");
+    }else if (r === 'TIPIK_BE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VElQSUtfQkU=");
+    }else if (r === 'RAI1IT') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9UkFJMUlU");
+    }else if (r === 'DAS_ERSTE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9REFTX0VSU1RF");
+    }else if (r === 'NRK1_NO') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9TlJLMV9OTw==");
+    }else if (r === 'CTSPORTS_CZ') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9Q1RTUE9SVFNfQ1o=");
+    }else if (r === 'Canal_4_SV') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9Q2FuYWxfNF9TVg==");
+    }else if (r === 'TVMAX') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9VFZNQVg=");
+    }else if (r === 'V_SPORTS_PREMIUM_SE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9Vl9TUE9SVFNfUFJFTUlVTV9TRQ==");
+    }else if (r === 'LAUNE_BE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9TEFVTkVfQkU=");
+    }else if (r === 'RTL_DE') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9UlRMX0RF");
+    }else if (r === 'ARENA_SPORTSP_1_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTUF8xX0JI");
+    }else if (r === 'ARENA_SPORTSP_2_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTUF8yX0JI");
+    }else if (r === 'ARENA_SPORTSP_3_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTUF8zX0JICgo=");
+    }else if (r === 'ARENA_SPORTS_1_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTXzFfQkg=");
+    }else if (r === 'ARENA_SPORTS_2_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTXzJfQkg=");
+    }else if (r === 'ARENA_SPORTS_3_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTXzNfQkg=");
+    }else if (r === 'ARENA_SPORTS_4_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTXzRfQkg=");
+    }else if (r === 'ARENA_SPORTS_5_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTXzVfQkg=");
+    }else if (r === 'ARENA_SPORTS_6_BH') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9QVJFTkFfU1BPUlRTXzZfQkg=");
+    }else if (r === 'GO3_SPORT1') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9R08zX1NQT1JUMQ==");
+    }else if (r === 'GO3_SPORT2') {
+        url = atob("aHR0cHM6Ly93d3cud2Vha3NwZWxsLmhvbWVzL3R2Lmh0bWw/aWQ9R08zX1NQT1JUMg==");
+    }else if (r === 'sky_sports_laliga') {
+        url = atob("aHR0cHM6Ly9sYTEwaGQuY29tL3Zpdm8vY2FuYWxlcy5waHA/c3RyZWFtPXNreV9zcG9ydHNfbGFsaWdh");
+    }else if (r === 'cbs_sports_network') {
+        url = atob("aHR0cHM6Ly9sYTEwaGQuY29tL3Zpdm8vY2FuYWxlcy5waHA/c3RyZWFtPWNic19zcG9ydHNfbmV0d29yaw==");
+    }
+    
+    
+    else if (r === '2521') {
+        url = atob("aHR0cHM6Ly9zdHJlYW1idHcuY29tL2lmcmFtZS9jaDEucGhw");
+    }else if (r === 'es22') {
+        url = atob("aHR0cHM6Ly9jYW5kbGVyLmJlYXV0eS9oYm9tYXgyLmh0bWw=");
+    }else if (r === 'btw1') {
+        url = "https://streambtw.com/iframe/ch1.php";
+    }else if (r === 'btw2') {
+        url = "https://streambtw.com/iframe/ch2.php";
+    }else if (r === 'btw3') {
+        url = "https://streambtw.com/iframe/ch3.php";
+    }else if (r === 'btw4') {
+        url = "https://streambtw.com/iframe/ch4.php";
+    }else if (r === 'btw5') {
+        url = "https://streambtw.com/iframe/ch5.php";
+    }else if (r === 'btw6') {
+        url = "https://streambtw.com/iframe/ch6.php";
+    }else if (r === 'btw7') {
+        url = "https://streambtw.com/iframe/ch7.php";
+    }else if (r === 'btw8') {
+        url = "https://streambtw.com/iframe/ch8.php";
+    }else if (r === 'btw9') {
+        url = "https://streambtw.com/iframe/ch9.php";
+    }else if (r === 'btw10') {
+        url = "https://streambtw.com/iframe/ch10.php";
+    }else if (r === 'btw11') {
+        url = "https://streambtw.com/iframe/ch11.php";
+    }else if (r === 'btw12') {
+        url = "https://streambtw.com/iframe/ch12.php";
+    }else if (r === 'btw13') {
+        url = "https://streambtw.com/iframe/ch13.php";
+    }else if (r === 'btw14') {
+        url = "https://streambtw.com/iframe/ch14.php";
+    }else if (r === 'btwf1') {
+        url = "https://streambtw.com/iframe/f1.php";
+    }else if (r === 'btw15') {
+        url = "https://streambtw.com/iframe/ch15.php";
+    }else if (r === 'btwboxing') {
+        url = "https://streambtw.com/iframe/box1.php";
+    }else if (r === 'btwmoto') {
+        url = "https://streambtw.com/iframe/moto.php";
+    }else if (r === 'footy1') {
+        url = "https://sportsurge.stream/embed/footy1.php";
+    }else if (r === 'footy2') {
+        url = "https://sportsurge.stream/embed/footy2.php";
+    }else if (r === 'footy3') {
+        url = "https://sportsurge.stream/embed/footy3.php";
+    }else if (r === 'footy4') {
+        url = "https://sportsurge.stream/embed/footy4.php";
+    }else if (r === 'footy5') {
+        url = "https://sportsurge.stream/embed/footy5.php";
+    }else if (r === 'footy6') {
+        url = "https://sportsurge.stream/embed/footy6.php";
+    }else if (r === 'footy7') {
+        url = "https://sportsurge.stream/embed/footy7.php";
+    }else if (r === 'footy8') {
+        url = "https://sportsurge.stream/embed/footy8.php";
+    }else if (r === 'footy9') {
+        url = "https://sportsurge.stream/embed/footy9.php";
+    }else if (r === 'footy10') {
+        url = "https://sportsurge.stream/embed/footy10.php";
+    }else if (r === 'footy11') {
+        url = "https://sportsurge.stream/embed/footy11.php";
+    }else if (r === 'footy12') {
+        url = "https://sportsurge.stream/embed/footy12.php";
+    }else if (r === 'footy13') {
+        url = "https://sportsurge.stream/embed/footy13.php";
+    }else if (r === 'footy14') {
+        url = "https://sportsurge.stream/embed/footy14.php";
+    }else if (r === 'footy15') {
+        url = "https://sportsurge.stream/embed/footy15.php";
+    }else if (r === 'footymoto') {
+        url = "https://flstv.online//embed/motogp.php";
+    }else if (r === 'footyf1') {
+        url = "https://sportsurge.stream/embed/f1.php";
+    }else if (r === 'footyboxing') {
+        url = "https://sportsurge.stream/embed/boxing.php";
+    }else if (r === 'freesportstimeboxing') {
+        url = "https://freesportstime.com/total/boxing.php";
+    }else if (r === 'sporteaboxing') {
+        url = "https://s1.sportea.link/live/embed.php?ch=es67";
+    }else if (r === 'ch72') {
+        url = "https://s1.sportea.link/live/embed.php?ch=ch72";
+    }else if (r === 'es10') {
+        url = "https://s1.sportea.link/live/embed.php?ch=es10";
+    }else if (r === 'es11') {
+        url = "https://s1.sportea.link/live/embed.php?ch=es11";
+    }else if (r === 'es12') {
+        url = "https://s1.sportea.link/live/embed.php?ch=es12";
+    }else if (r === 'es13') {
+        url = "https://s1.sportea.link/live/embed.php?ch=es13";
+    }else if (r === 'movistarlaliga') {
+        url = "https://streamtp2.com/global1.php?stream=movistarlaliga";
+    }else if (r === 'espn1') {
+        url = "https://streamtp2.com/global1.php?stream=espn1";
+    }else if (r === 'sportv_3pt') {
+        url = "https://streamtp2.com/global1.php?stream=sportv_3pt";
+    }else if (r === 'espn2') {
+        url = "https://streamtp2.com/global1.php?stream=espn2";
+    }else if (r === 'peacockusa5') {
+        url = "https://www.weakspell.homes/peacockusa.html?get=https://g006-sle-us-cmaf-prd-ll.cdn.peacocktv.com/co01/Content/CMAF_S2-CTR-4s/Live/channel(5010287-710969-48e8c6b52f9)/master.mpd&img=aHR0cHM6Ly9pbWFnZS5kaXNjb3ZlcnkuaW5kYXpuLmNvbS9jYS92Mi9jYS9pbWFnZT9pZD1tM2pxdW8wenczbDEwOHZva3p3M3prb2ZfaW1hZ2UtaGVhZGVyX3BFc18xNzE0MjQwMDMwMDAw&key=0022258a68c9f93bc3050f9ccace8097&key2=ff5f34e8330e220d39a51c2f6382454d";
+    }else if (r === 'peacockusa6') {
+        url = "https://www.weakspell.homes/peacockusa.html?get=https://g006-sle-us-cmaf-prd-ak.cdn.peacocktv.com/co01/Content/CMAF_S2-CTR-4s/Live/channel(5010279-710961-48e8bf140f1)/master.mpd&img=aHR0cHM6Ly9pbWFnZS5kaXNjb3ZlcnkuaW5kYXpuLmNvbS9jYS92Mi9jYS9pbWFnZT9pZD0xNnpvZGthM2V4bGdvMWZra3dmd3A3eWJneV9pbWFnZS1oZWFkZXJfcFJvd18xNjY3NTY1OTk3MDAwJnF1YWxpdHk9NzA=&key=00221808e3288850d7269f83a3d8494e&key2=c51bac69df19250728a41bb79753ca32";
+    }else if (r === 'peacockusa7') {
+        url = "https://www.weakspell.homes/peacockusa.html?get=https://g006-sle-us-cmaf-prd-fy.cdn.peacocktv.com/co01/Content/CMAF_S2-CTR-4s/Live/channel(5010286-710968-48e8c5c10b8)/master.mpd&img=aHR0cHM6Ly9pbWFnZS5kaXNjb3ZlcnkuaW5kYXpuLmNvbS9jYS92Mi9jYS9pbWFnZT9pZD1mbHJ6dnZyYW52aHExdmw2MXo0em9tZzJzX2ltYWdlLWhlYWRlcl9wRXNfMTcxNDI0MDAzMDAwMCZxdWFsaXR5PTcw&key=00224729c1a74b0aab22b35a29ffc4eb&key2=13f48022bb55788a0187da167bf36995";
+    }else if (r === 'peacockusa8') {
+        url = "https://www.weakspell.homes/peacockusa.html?get=https://g006-sle-us-cmaf-prd-cf.cdn.peacocktv.com/co01/Content/CMAF_S2-CTR-4s/Live/channel(5010289-710971-48e8c89d77b)/master.mpd&img=aHR0cHM6Ly9pbWFnZS5kaXNjb3ZlcnkuaW5kYXpuLmNvbS9jYS92Mi9jYS9pbWFnZT9pZD0yajZmaTNvMGYxdDFqNGY2d3c2eG0wZWN2X2ltYWdlLWhlYWRlcl9wUm93XzE3MTQyNDAwMzAwMDA=&key=00223db70a566f334379e3b306c2c4b2&key2=2664f1f13d5d87da1590b72d5cc30260";
+    }else if (r === 'peacockusa9') {
+        url = "https://www.weakspell.homes/peacockusa.html?get=https://g006-sle-us-cmaf-prd-cf.cdn.peacocktv.com/co01/Content/CMAF_S2-CTR-4s/Live/channel(5010284-710966-48e8c3d8c36)/master.mpd&img=aHR0cHM6Ly9pbWFnZS5kaXNjb3ZlcnkuaW5kYXpuLmNvbS9jYS92Mi9jYS9pbWFnZT9pZD1obnU0c2J2cGFoa2kxazc4bG9ncWtndjZ3X2ltYWdlLWhlYWRlcl9wRXNfMTcxNDI0MDAzMDAwMA==&key=002243b6897c5f83f83097b076280c0b&key2=e4c6ec5b7208c8c407de0bfac65d4dc7";
+    }else if (r === 'peacockusa10') {
+        url = "https://www.weakspell.homes/peacockusa.html?get=https://g006-sle-us-cmaf-prd-fy.cdn.peacocktv.com/co01/Content/CMAF_S2-CTR-4s/Live/channel(5010283-710965-48e8c2e49f5)/master.mpd&img=aHR0cHM6Ly9pbWFnZS5kaXNjb3ZlcnkuaW5kYXpuLmNvbS9jYS92Mi9jYS9pbWFnZT9pZD1hd-m92NmlwNzhrNjlrNmx6Z3ZjdmllbjI4X2ltYWdlLWhlYWRlcl9wUm93XzE3MTQyNDAwMzAwMDA=&key=0022edf6f706a890b8324e6a8c2f475a&key2=e840303470152a39697e29bd5d453e4f";
+    }
+    
+    
+    else {
+        url = "https://hesgoal-live-tv.pages.dev";
+    }
+
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('class', 'embed-responsive-item');
+    iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts');
+    iframe.setAttribute('allow', 'encrypted-media *;');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('src', url);
+    document.getElementById('player').appendChild(iframe);
+</script>
