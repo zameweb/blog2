@@ -42,11 +42,20 @@
             max-width: 900px;
             margin: auto;
             padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .header-inner h1 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #e63946;
         }
         
         nav {
@@ -251,12 +260,19 @@
                 order: -1;
             }
             
-            .header-inner h1 {
-                font-size: 1.3rem;
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .logo {
+                margin-bottom: 10px;
+                font-size: 1.8rem;
             }
             
             nav {
                 justify-content: space-between;
+                width: 100%;
             }
             
             nav a {
@@ -267,10 +283,6 @@
         @media (max-width: 600px) {
             body {
                 font-size: 14px;
-            }
-            
-            .header-inner h1 {
-                font-size: 1.2rem;
             }
             
             .container {
@@ -304,8 +316,8 @@
         }
         
         @media (max-width: 400px) {
-            .header-inner h1 {
-                font-size: 1.1rem;
+            .logo {
+                font-size: 1.5rem;
             }
             
             nav {
@@ -322,7 +334,7 @@
 <body>
     <header>
         <div class="header-inner">
-            <h1>Premier League Live Streaming - Today's Matches</h1>
+            <a href="index.html" class="logo">MM<span>FOOTY</span></a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="#">Live</a>
@@ -474,7 +486,7 @@
             <div class="footer-links">
                 <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a> | <a href="#">Contact</a>
             </div>
-            <p style="margin-top:15px;">© 2024 Football Schedule – All Rights Reserved</p>
+            <p style="margin-top:15px;">© 2024 MMFOOTY – All Rights Reserved</p>
         </div>
     </footer>
     
