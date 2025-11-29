@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Live Streaming - Today's Matches & Broadcast Schedule</title>
+    <meta name="description" content="Live streaming schedule for Premier League matches today. Watch live football on official TV channels and streaming platforms.">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Premier League Live Streaming - Today's Matches">
+    <meta property="og:description" content="Complete Premier League live streaming schedule with official broadcast channels and streaming links.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/premier-league-cover.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Premier League Live Streaming Schedule">
+    <meta name="twitter:description" content="Watch Premier League matches live today - official streaming links and TV channels">
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" as="style">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* HEADER */
+        header {
+            background: #111;
+            color: #fff;
+            padding: 15px 0;
+        }
+        
+        .header-inner {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #e63946;
+        }
+        
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 5px 0;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* BREADCRUMB */
+        .breadcrumb {
+            max-width: 900px;
+            margin: 10px auto;
+            padding: 0 15px;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .breadcrumb a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* MAIN */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            padding: 20px 15px;
+        }
+        
+        .content {
+            flex: 1;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 0 0 5px rgba(0,0,0,.1);
+            min-width: 0;
+        }
+        
+        .sidebar {
+            width: 300px;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 0 0 5px rgba(0,0,0,.1);
+        }
+        
+        /* SIMPLE MATCH SCHEDULE */
+        .simple-schedule {
+            margin: 20px 0;
+        }
+        
+        .simple-match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #e63946;
+        }
+        
+        .match-info {
+            flex: 1;
+        }
+        
+        .team-names {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .match-time {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .live-here-btn {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .live-here-btn:hover {
+            background: #c1121f;
+        }
+        
+        /* ADS */
+        .ads {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .ad-unit {
+            background: #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        /* ARTICLE CONTENT */
+        .article-content {
+            margin: 20px 0;
+        }
+        
+        .article-content h2 {
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* SIDEBAR WIDGETS */
+        .sidebar-widget {
+            margin-bottom: 25px;
+        }
+        
+        .sidebar-widget h3 {
+            background: #111;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 -15px 15px -15px;
+            font-size: 16px;
+        }
+        
+        .upcoming-match {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .upcoming-match:last-child {
+            border-bottom: none;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        .footer-inner {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            margin: 0 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* RESPONSIVE STYLES */
+        @media (max-width: 920px) {
+            .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .sidebar {
+                width: 100%;
+                /* Sidebar akan secara natural berada di bawah content karena flex-direction: column */
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .logo {
+                margin-bottom: 10px;
+                font-size: 1.8rem;
+            }
+            
+            nav {
+                justify-content: space-between;
+                width: 100%;
+            }
+            
+            nav a {
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .container {
+                padding: 15px 10px;
+            }
+            
+            .content, .sidebar {
+                padding: 12px;
+            }
+            
+            .simple-match {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .live-here-btn {
+                align-self: stretch;
+                text-align: center;
+            }
+            
+            .breadcrumb {
+                font-size: 13px;
+                padding: 0 10px;
+            }
+            
+            .footer-links a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            nav a {
+                padding: 3px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">MM<span>FOOTY</span></a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Live</a>
+                <a href="#">Schedule</a>
+                <a href="#">Leagues</a>
+                <a href="#">Results</a>
+                <a href="#">Streaming</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- BREADCRUMB SEO -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> › <a href="#">Premier League</a> › <span>Live Streaming</span>
+    </div>
+    
+    <div class="container">
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <!-- Ad Unit 1 -->
+            <div class="ads">
+                <div class="ad-unit" style="height:110px;padding-top:40px;">
+                    Adsense Ad Slot (Top - 568px)
+                </div>
+            </div>
+            
+            <!-- Simple Live Streaming Schedule -->
+            <div class="simple-schedule">
+                <h2>Today's Premier League Live Matches</h2>
+                
+                <div class="simple-match">
+                    <div class="match-info">
+                        <div class="team-names">Manchester United vs Liverpool</div>
+                        <div class="match-time">Sunday, 15:00 GMT | Old Trafford</div>
+                    </div>
+                    <button class="live-here-btn">LIVE HERE</button>
+                </div>
+                
+                <div class="simple-match">
+                    <div class="match-info">
+                        <div class="team-names">Arsenal vs Chelsea</div>
+                        <div class="match-time">Sunday, 17:30 GMT | Emirates Stadium</div>
+                    </div>
+                    <button class="live-here-btn">LIVE HERE</button>
+                </div>
+                
+                <div class="simple-match">
+                    <div class="match-info">
+                        <div class="team-names">Manchester City vs Tottenham</div>
+                        <div class="match-time">Today, 20:00 GMT | Etihad Stadium</div>
+                    </div>
+                    <button class="live-here-btn">LIVE HERE</button>
+                </div>
+                
+                <div class="simple-match">
+                    <div class="match-info">
+                        <div class="team-names">Newcastle vs Aston Villa</div>
+                        <div class="match-time">Tomorrow, 15:00 GMT | St James' Park</div>
+                    </div>
+                    <button class="live-here-btn">LIVE HERE</button>
+                </div>
+                
+                <div class="simple-match">
+                    <div class="match-info">
+                        <div class="team-names">West Ham vs Brighton</div>
+                        <div class="match-time">Tomorrow, 15:00 GMT | London Stadium</div>
+                    </div>
+                    <button class="live-here-btn">LIVE HERE</button>
+                </div>
+            </div>
+            
+            <!-- Ad Unit 2 -->
+            <div class="ads">
+                <div class="ad-unit" style="height:110px;padding-top:40px;margin-top:20px;">
+                    Adsense Ad Slot (Middle - 568px)
+                </div>
+            </div>
+            
+            <!-- Article Content -->
+            <div class="article-content">
+                <h2>Premier League Live Streaming Guide 2024</h2>
+                <p>
+                    The Premier League continues to be the most watched football league in the world, with millions of fans tuning in each week to follow their favorite teams. With the 2024 season underway, fans have more options than ever to watch matches live, whether through traditional television broadcasts or modern streaming services. In the UK, Sky Sports, BT Sport, and Amazon Prime Video share broadcasting rights, while international viewers can access matches through various platforms like NBC Sports in the US, DAZN in multiple countries, and beIN Sports in the Middle East.
+                </p>
+                <p>
+                    Streaming technology has revolutionized how fans consume Premier League content. Most broadcasters now offer high-definition streams, multi-angle views, and expert commentary through their digital platforms. Many services also provide match highlights, in-depth analysis, and exclusive interviews with players and managers. For the best viewing experience, ensure you have a stable internet connection and check local blackout restrictions that may apply to certain matches in your region.
+                </p>
+            </div>
+        </div>
+        
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <!-- Sidebar Ad 1 -->
+            <div class="ads">
+                <div class="ad-unit" style="height:300px;padding-top:130px;">
+                    Sidebar Ad Slot (300px)
+                </div>
+            </div>
+            
+            <!-- Upcoming Matches Widget -->
+            <div class="sidebar-widget">
+                <h3>Upcoming Matches</h3>
+                <div class="upcoming-match">
+                    <strong>Newcastle vs Aston Villa</strong><br>
+                    <small>Tomorrow, 15:00 GMT</small>
+                </div>
+                <div class="upcoming-match">
+                    <strong>West Ham vs Brighton</strong><br>
+                    <small>Tomorrow, 15:00 GMT</small>
+                </div>
+                <div class="upcoming-match">
+                    <strong>Fulham vs Wolves</strong><br>
+                    <small>Tomorrow, 15:00 GMT</small>
+                </div>
+                <div class="upcoming-match">
+                    <strong>Everton vs Nottingham</strong><br>
+                    <small>Tomorrow, 15:00 GMT</small>
+                </div>
+            </div>
+            
+            <!-- Top Leagues Widget -->
+            <div class="sidebar-widget">
+                <h3>Top Leagues</h3>
+                <div class="upcoming-match">
+                    <a href="#">La Liga Live</a>
+                </div>
+                <div class="upcoming-match">
+                    <a href="#">Serie A Streaming</a>
+                </div>
+                <div class="upcoming-match">
+                    <a href="#">Bundesliga Matches</a>
+                </div>
+                <div class="upcoming-match">
+                    <a href="#">Champions League</a>
+                </div>
+            </div>
+            
+            <!-- Sidebar Ad 2 -->
+            <div class="ads">
+                <div class="ad-unit" style="height:300px;padding-top:130px;margin-top:20px;">
+                    Sidebar Ad Slot (Bottom 300px)
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a> | <a href="#">Contact</a>
+            </div>
+            <p style="margin-top:15px;">© 2024 MMFOOTY – All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <!-- SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://yourwebsite.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Premier League",
+                "item": "https://yourwebsite.com/premier-league/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Live Streaming",
+                "item": "https://yourwebsite.com/premier-league/live-streaming/"
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsEvent",
+        "name": "Manchester United vs Liverpool",
+        "startDate": "2024-01-15T15:00",
+        "endDate": "2024-01-15T17:00",
+        "location": {
+            "@type": "Place",
+            "name": "Old Trafford"
+        },
+        "description": "Premier League match between Manchester United and Liverpool",
+        "eventStatus": "https://schema.org/EventScheduled"
+    }
+    </script>
+    
+    <script>
+        // JavaScript untuk tombol LIVE HERE
+        document.addEventListener('DOMContentLoaded', function() {
+            const liveButtons = document.querySelectorAll('.live-here-btn');
+            
+            liveButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const matchInfo = this.closest('.simple-match').querySelector('.team-names').textContent;
+                    alert(`Redirecting to live stream for: ${matchInfo}\n\nThis would normally redirect to the actual streaming page.`);
+                    // Di sini Anda bisa menambahkan redirect ke halaman streaming sesungguhnya
+                    // window.location.href = 'streaming-page.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
