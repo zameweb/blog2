@@ -331,6 +331,29 @@
                 text-align: center;
             }
         }
+
+        .view-button {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.view-button:hover {
+    background: #c1121f;
+    color: #fff;
+    text-decoration: none;
+}
+        
     </style>
 </head>
 <body>
@@ -373,14 +396,29 @@
                 </div>
             </div>
             
-            <h2>Featured Football Leagues</h2>
-            <div class="league-list">
-                <div class="league-item"><span>Premier League</span><button>View</button></div>
-                <div class="league-item"><span>La Liga</span><button>View</button></div>
-                <div class="league-item"><span>Serie A</span><button>View</button></div>
-                <div class="league-item"><span>UEFA Champions League</span><button>View</button></div>
-                <div class="league-item"><span>UEFA Europa League</span><button>View</button></div>
-            </div>
+<h2>Featured Football Leagues</h2>
+<div class="league-list">
+    <div class="league-item">
+        <span>Premier League</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>La Liga</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>Serie A</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>UEFA Champions League</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>UEFA Europa League</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+</div>
             
             <div class="ads">
                 <div class="ad-unit" style="height:110px;padding-top:40px;margin-top:20px;">
@@ -556,19 +594,5 @@
     }
     </script>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const viewButtons = document.querySelectorAll('.league-item button');
-            
-            viewButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const leagueName = this.closest('.league-item').querySelector('span').textContent;
-                    alert(`Redirecting to: ${leagueName}\n\nThis would normally redirect to the league page.`);
-                
-                     window.location.href = 'https://www.mmfooty.com/live';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
