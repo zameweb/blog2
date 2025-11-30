@@ -146,7 +146,7 @@
             font-weight: bold;
         }
         
-        .league-item button {
+        .view-button {
             background: #e63946;
             color: #fff;
             border: none;
@@ -157,10 +157,16 @@
             white-space: nowrap;
             font-weight: bold;
             transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-width: 60px;
         }
         
-        .league-item button:hover {
+        .view-button:hover {
             background: #c1121f;
+            color: #fff;
+            text-decoration: none;
         }
         
         /* ADS */
@@ -283,11 +289,21 @@
             
             .league-item {
                 padding: 10px 12px;
+                flex-wrap: wrap;
             }
             
-            .league-item button {
+            .league-item span {
+                margin-right: 0;
+                margin-bottom: 8px;
+                width: 100%;
+                white-space: normal;
+            }
+            
+            .view-button {
                 padding: 6px 12px;
                 font-size: 13px;
+                align-self: flex-end;
+                min-width: 55px;
             }
             
             .breadcrumb {
@@ -324,15 +340,15 @@
             .league-item span {
                 margin-right: 0;
                 white-space: normal;
+                width: 100%;
             }
             
-            .league-item button {
+            .view-button {
                 align-self: stretch;
                 text-align: center;
+                width: 100%;
             }
         }
-
-        
     </style>
 </head>
 <body>
@@ -375,29 +391,29 @@
                 </div>
             </div>
             
-<h2>Featured Football Leagues</h2>
-<div class="league-list">
-    <div class="league-item">
-        <span>Premier League</span>
-        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
-    </div>
-    <div class="league-item">
-        <span>La Liga</span>
-        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
-    </div>
-    <div class="league-item">
-        <span>Serie A</span>
-        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
-    </div>
-    <div class="league-item">
-        <span>UEFA Champions League</span>
-        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
-    </div>
-    <div class="league-item">
-        <span>UEFA Europa League</span>
-        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
-    </div>
-</div>
+            <h2>Featured Football Leagues</h2>
+            <div class="league-list">
+                <div class="league-item">
+                    <span>Premier League</span>
+                    <a href="https://www.mmfooty.com/premier-league" class="view-button">View</a>
+                </div>
+                <div class="league-item">
+                    <span>La Liga</span>
+                    <a href="https://www.mmfooty.com/la-liga" class="view-button">View</a>
+                </div>
+                <div class="league-item">
+                    <span>Serie A</span>
+                    <a href="https://www.mmfooty.com/serie-a" class="view-button">View</a>
+                </div>
+                <div class="league-item">
+                    <span>UEFA Champions League</span>
+                    <a href="https://www.mmfooty.com/champions-league" class="view-button">View</a>
+                </div>
+                <div class="league-item">
+                    <span>UEFA Europa League</span>
+                    <a href="https://www.mmfooty.com/europa-league" class="view-button">View</a>
+                </div>
+            </div>
             
             <div class="ads">
                 <div class="ad-unit" style="height:110px;padding-top:40px;margin-top:20px;">
@@ -572,6 +588,5 @@
         "eventStatus": "https://schema.org/EventScheduled"
     }
     </script>
-    
 </body>
 </html>
