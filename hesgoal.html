@@ -398,46 +398,46 @@
             
             <!-- Simple Live Streaming Schedule -->
             <div class="simple-schedule">
-                <h2>Today's Football Live Matches on Hesgoal TV</h2>
+                <h2>Today's Premier League Live Matches</h2>
                 
                 <div class="simple-match">
                     <div class="match-info">
                         <div class="team-names">Manchester United vs Liverpool</div>
-                        <div class="match-time">Sunday, 15:00 GMT | Premier League | Hesgoal TV Stream</div>
+                        <div class="match-time">Sunday, 15:00 GMT | Old Trafford</div>
                     </div>
-                    <button class="live-here-btn">WATCH LIVE</button>
+                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">Real Madrid vs Barcelona</div>
-                        <div class="match-time">Sunday, 20:00 GMT | La Liga | Hesgoal TV Stream</div>
-                    </div>
-                    <button class="live-here-btn">WATCH LIVE</button>
+                        <div class="team-names">Arsenal vs Chelsea</div>
+                        <div class="match-time">Sunday, 17:30 GMT | Emirates Stadium</div>
+                    </div>arsenal-chelsea-live
+                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">Bayern Munich vs Borussia Dortmund</div>
-                        <div class="match-time">Today, 17:30 GMT | Bundesliga | Hesgoal TV Stream</div>
+                        <div class="team-names">Manchester City vs Tottenham</div>
+                        <div class="match-time">Today, 20:00 GMT | Etihad Stadium</div>
                     </div>
-                    <button class="live-here-btn">WATCH LIVE</button>
+                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">AC Milan vs Inter Milan</div>
-                        <div class="match-time">Tomorrow, 19:45 GMT | Serie A | Hesgoal TV Stream</div>
+                        <div class="team-names">Newcastle vs Aston Villa</div>
+                        <div class="match-time">Tomorrow, 15:00 GMT | St James' Park</div>
                     </div>
-                    <button class="live-here-btn">WATCH LIVE</button>
+                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">PSG vs Marseille</div>
-                        <div class="match-time">Tomorrow, 20:00 GMT | Ligue 1 | Hesgoal TV Stream</div>
+                        <div class="team-names">West Ham vs Brighton</div>
+                        <div class="match-time">Tomorrow, 15:00 GMT | London Stadium</div>
                     </div>
-                    <button class="live-here-btn">WATCH LIVE</button>
+                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
                 </div>
             </div>
             
@@ -709,32 +709,6 @@
             }
         ]
     }
-    </script>
-    
-    <script>
-        // JavaScript untuk tombol LIVE HERE
-        document.addEventListener('DOMContentLoaded', function() {
-            const liveButtons = document.querySelectorAll('.live-here-btn');
-            
-            liveButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const matchInfo = this.closest('.simple-match').querySelector('.team-names').textContent;
-                    const matchTime = this.closest('.simple-match').querySelector('.match-time').textContent;
-                    
-                    alert(`Match: ${matchInfo}\nTime: ${matchTime}\n\nNote: This demonstration page cannot link directly to streaming sites. Actual implementation would redirect to the appropriate streaming page.\n\nAlways use official streaming services when available in your region.`);
-                    
-                    // Logika untuk halaman produksi:
-                    // window.location.href = '/streaming-redirect?match=' + encodeURIComponent(matchInfo);
-                });
-            });
-            
-            // Update tahun di footer secara otomatis
-            const yearSpan = document.querySelector('footer p:last-child');
-            if (yearSpan) {
-                const currentYear = new Date().getFullYear();
-                yearSpan.textContent = yearSpan.textContent.replace('2024', currentYear);
-            }
-        });
     </script>
 </body>
 </html>
