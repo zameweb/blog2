@@ -1,22 +1,12 @@
+# _config.yml
 title: "MMFOOTY - Today's Football Schedule"
 description: "Today's football schedule with live match times, official streaming links, and updated scores"
-baseurl: ""
+baseurl: ""  # leave empty if serving from root
 url: "https://www.mmfooty.com"
 lang: "en"
 
-# SEO Settings
-author: "MMFOOTY Team"
-twitter_username: "@mmfooty"
-github_username: "mmfooty"
-facebook_app_id: ""
-google_analytics: ""
-
-# Build settings
-markdown: kramdown
-permalink: pretty
-sass:
-  sass_dir: _sass
-  style: compressed
+# Theme (gunakan minimal theme)
+theme: minima  # atau hapus baris ini jika tidak pakai theme
 
 # Collections
 collections:
@@ -29,51 +19,4 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "page"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-# Site navigation (can be overridden by _data/navigation.yml)
-navigation:
-  - title: "Live"
-    url: "/live"
-  - title: "Schedule"
-    url: "/schedule"
-  - title: "Leagues"
-    url: "/leagues"
-  - title: "Results"
-    url: "/results"
-  - title: "Streaming"
-    url: "/streaming"
-
-# League data
-leagues:
-  - name: "Premier League"
-    slug: "premier-league"
-    view_url: "/live"
-    featured: true
-  - name: "La Liga"
-    slug: "la-liga"
-    view_url: "/live"
-    featured: true
-  - name: "Serie A"
-    slug: "serie-a"
-    view_url: "/live"
-    featured: true
-  - name: "UEFA Champions League"
-    slug: "champions-league"
-    view_url: "/live"
-    featured: true
-  - name: "UEFA Europa League"
-    slug: "europa-league"
-    view_url: "/live"
-    featured: true
-
-# Social Media
-social:
-  twitter: "https://twitter.com/mmfooty"
-  facebook: "https://facebook.com/mmfooty"
-  instagram: "https://instagram.com/mmfooty"
+      layout: "default"
