@@ -1,0 +1,19 @@
+- name: Premier League
+  url: /premier-league
+  matches: 380
+  
+- name: La Liga
+  url: /la-liga
+  matches: 380
+  
+- name: Serie A
+  url: /serie-a
+  matches: 380
+  
+- name: Bundesliga
+  url: /bundesliga
+  matches: 306
+  
+- name: Champions League
+  url: /champions-league
+  matches: 125
