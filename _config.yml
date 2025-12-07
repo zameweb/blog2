@@ -1,0 +1,44 @@
+title: MMFOOTY - Football Schedule & Live Streaming
+description: Today's football schedule with live match times, official streaming links, and updated scores
+baseurl: ""
+url: "https://www.mmfooty.com"
+lang: en
+
+# Theme settings
+theme: mmfooty-theme
+logo: /assets/images/logo.png
+
+# Navigation
+navigation:
+  - title: Live
+    url: /live
+  - title: Schedule
+    url: /schedule
+  - title: Leagues
+    url: /leagues
+  - title: Results
+    url: /results
+  - title: Streaming
+    url: /streaming
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+google_analytics: UA-XXXXXXXXX-X
+adsense_client: ca-pub-1555037532758037
