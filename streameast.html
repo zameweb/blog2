@@ -891,32 +891,5 @@
     }
     </script>
     
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId !== '#') {
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-        
-        // Update year in footer
-        document.addEventListener('DOMContentLoaded', function() {
-            const yearElement = document.querySelector('footer p:last-child');
-            if(yearElement) {
-                const currentYear = new Date().getFullYear();
-                yearElement.textContent = yearElement.textContent.replace('2025', currentYear);
-            }
-        });
-    </script>
 </body>
 </html>
