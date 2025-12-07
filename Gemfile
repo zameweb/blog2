@@ -1,17 +1,17 @@
 # Gemfile
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.10.0"  # GitHub Pages menggunakan Jekyll 3.10.0
+gem "jekyll", "~> 3.10.0"
 gem "github-pages", group: :jekyll_plugins
 
-# Jekyll plugins yang kompatibel
 group :jekyll_plugins do
-  gem "jekyll-sitemap"
-  gem "jekyll-seo-tag"
-  gem "jekyll-feed"
-  gem "jekyll-include-cache"
+  # Kosongkan dulu, tambahkan nanti jika perlu
 end
 
 # Windows compatibility
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "wdm", "~> 0.1.1", platforms: [:mingw, :mswin, :x64_mingw]
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", "~> 1.2"
+  gem "tzinfo-data"
+end
+
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :mswin, :x64_mingw]
