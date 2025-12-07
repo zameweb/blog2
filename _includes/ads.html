@@ -1,0 +1,39 @@
+<!-- _includes/ads.html -->
+<div class="ads">
+    <div class="ad-unit" style="height:110px;padding-top:40px;">
+        {% if include.location == "top" %}
+        <!-- Ad Top -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1555037532758037"
+     crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1555037532758037"
+             data-ad-slot="6856049393"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        {% elsif include.location == "middle" %}
+        <!-- Ad Middle -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1555037532758037"
+     crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1555037532758037"
+             data-ad-slot="6699572070"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        {% else %}
+        <!-- Default Ad -->
+        <div style="background:#ddd;padding:20px;text-align:center;">
+            Advertisement Space
+        </div>
+        {% endif %}
+    </div>
+</div>
