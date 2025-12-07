@@ -1,0 +1,355 @@
+<!-- _includes/head.html -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ page.image | default: 'https://www.mmfooty.com/cover.jpg' }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+
+<!-- CSS -->
+<style>
+    /* RESET & BASE STYLES */
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+    
+    /* HEADER */
+    header {
+        background: #111;
+        color: #fff;
+        padding: 15px 0;
+    }
+    
+    .header-inner {
+        max-width: 900px;
+        margin: auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .logo span {
+        color: #e63946;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+    }
+    
+    /* BREADCRUMB */
+    .breadcrumb {
+        max-width: 900px;
+        margin: 10px auto;
+        padding: 0 15px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .breadcrumb a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .breadcrumb span {
+        color: #777;
+    }
+    
+    /* MAIN */
+    .container {
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+    
+    .content {
+        flex: 1;
+        background: #fff;
+        padding: 15px;
+        box-shadow: 0 0 5px rgba(0,0,0,.1);
+        min-width: 0;
+    }
+    
+    .sidebar {
+        width: 300px;
+        background: #fff;
+        padding: 15px;
+        box-shadow: 0 0 5px rgba(0,0,0,.1);
+    }
+    
+    /* LEAGUE LIST */
+    .league-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .league-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 12px 15px;
+        border-radius: 5px;
+        border-left: 4px solid #e63946;
+    }
+    
+    .league-item span {
+        flex: 1;
+        margin-right: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    
+    .view-button {
+        background: #e63946;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 3px;
+        font-size: 14px;
+        white-space: nowrap;
+        font-weight: bold;
+        transition: background 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        min-width: 60px;
+    }
+    
+    .view-button:hover {
+        background: #c1121f;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    /* ADS */
+    .ads {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .ad-unit {
+        background: #ddd;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    /* FAQ Section */
+    .faq {
+        margin-top: 20px;
+    }
+    
+    .faq p {
+        margin-bottom: 15px;
+    }
+    
+    /* SIDEBAR WIDGETS */
+    .sidebar-widget {
+        margin-bottom: 25px;
+    }
+    
+    .sidebar-widget h3 {
+        background: #111;
+        color: white;
+        padding: 10px 15px;
+        margin: 0 -15px 15px -15px;
+        font-size: 16px;
+    }
+    
+    .upcoming-match {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .upcoming-match:last-child {
+        border-bottom: none;
+    }
+    
+    /* FOOTER */
+    footer {
+        background: #111;
+        color: #fff;
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+    
+    .footer-inner {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .footer-links {
+        margin-bottom: 15px;
+    }
+    
+    .footer-links a {
+        color: #fff;
+        margin: 0 8px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+    
+    /* RESPONSIVE STYLES */
+    @media (max-width: 920px) {
+        .container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .sidebar {
+            width: 100%;
+        }
+        
+        .header-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .logo {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+        
+        nav {
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        nav a {
+            font-size: 13px;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+        
+        .container {
+            padding: 15px 10px;
+        }
+        
+        .content, .sidebar {
+            padding: 12px;
+        }
+        
+        .league-item {
+            padding: 10px 12px;
+            flex-wrap: wrap;
+        }
+        
+        .league-item span {
+            margin-right: 0;
+            margin-bottom: 8px;
+            width: 100%;
+            white-space: normal;
+        }
+        
+        .view-button {
+            padding: 6px 12px;
+            font-size: 13px;
+            align-self: flex-end;
+            min-width: 55px;
+        }
+        
+        .breadcrumb {
+            font-size: 13px;
+            padding: 0 10px;
+        }
+        
+        .footer-links a {
+            margin: 0 5px;
+            font-size: 13px;
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        nav {
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        nav a {
+            padding: 3px 0;
+        }
+        
+        .league-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .league-item span {
+            margin-right: 0;
+            white-space: normal;
+            width: 100%;
+        }
+        
+        .view-button {
+            align-self: stretch;
+            text-align: center;
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Performance -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" as="style">
