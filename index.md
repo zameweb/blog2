@@ -16,7 +16,7 @@ breadcrumb:
 <h2>Featured Football Leagues</h2>
 
 <div class="league-list">
-    {% for league in site.leagues %}
+    {% for league in site.data.leagues %}
     <div class="league-item">
         <span>{{ league.name }}</span>
         <a href="{{ league.view_url }}" class="view-button">View</a>
