@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier League Live Streaming - Today's Matches & Broadcast Schedule</title>
-    <meta name="description" content="Live streaming schedule for Premier League matches today. Watch live football on official TV channels and streaming platforms.">
+    <title>Live Football Streaming All Competitions - Watch Every Match Online Free 2025</title>
+    <meta name="description" content="Watch live football streaming from all competitions worldwide. Premier League, Champions League, La Liga, Serie A, Bundesliga, World Cup & more. Free HD streams available.">
     <!-- OpenGraph -->
-    <meta property="og:title" content="Premier League Live Streaming - Today's Matches">
-    <meta property="og:description" content="Complete Premier League live streaming schedule with official broadcast channels and streaming links.">
+    <meta property="og:title" content="Live Football Streaming All Competitions - Every Match Online">
+    <meta property="og:description" content="Watch live football from all competitions: Premier League, Champions League, La Liga, Serie A, Bundesliga, World Cup, Copa America, AFCON & more.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://example.com/premier-league-cover.jpg">
+    <meta property="og:image" content="https://www.mmfooty.com/images/live-football-all-competitions.jpg">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Premier League Live Streaming Schedule">
-    <meta name="twitter:description" content="Watch Premier League matches live today - official streaming links and TV channels">
+    <meta name="twitter:title" content="Live Football Streaming All Competitions">
+    <meta name="twitter:description" content="Watch every football match live - All competitions covered with free streaming links">
     <!-- Performance -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" as="style">
@@ -173,6 +173,38 @@
             text-decoration: none;
         }
         
+        /* LEAGUE TAGS */
+        .league-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0 25px 0;
+        }
+        
+        .league-tag {
+            background: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .league-tag:hover {
+            background: #e63946;
+            color: white;
+        }
+        
+        .pl-tag { background: #3D195B; color: white; }
+        .cl-tag { background: #1C3B8B; color: white; }
+        .laliga-tag { background: #EF3340; color: white; }
+        .seriea-tag { background: #0066B3; color: white; }
+        .bundesliga-tag { background: #D2010D; color: white; }
+        .ligue1-tag { background: #DA291C; color: white; }
+        .worldcup-tag { background: #F0B323; color: #000; }
+        
         /* ADS */
         .ads {
             margin: 20px 0;
@@ -197,9 +229,70 @@
             padding-bottom: 10px;
         }
         
+        .article-content h3 {
+            color: #444;
+            margin: 20px 0 10px 0;
+        }
+        
         .article-content p {
             margin-bottom: 15px;
             text-align: justify;
+        }
+        
+        .article-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* FEATURED INFO BOX */
+        .featured-info {
+            background: #e8f4fc;
+            border-left: 4px solid #2a8fbd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .featured-info h3 {
+            color: #2a8fbd;
+            margin-top: 0;
+        }
+        
+        /* COMPETITION GRID */
+        .competition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .competition-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.2s;
+        }
+        
+        .competition-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .competition-card h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .competition-card p {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
         }
         
         /* SIDEBAR WIDGETS */
@@ -263,7 +356,6 @@
             
             .sidebar {
                 width: 100%;
-                /* Sidebar akan secara natural berada di bawah content karena flex-direction: column */
             }
             
             .header-inner {
@@ -283,6 +375,10 @@
             
             nav a {
                 font-size: 13px;
+            }
+            
+            .competition-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
         }
         
@@ -320,6 +416,11 @@
                 margin: 0 5px;
                 font-size: 13px;
             }
+            
+            .competition-grid {
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+                gap: 10px;
+            }
         }
         
         @media (max-width: 400px) {
@@ -335,27 +436,36 @@
             nav a {
                 padding: 3px 0;
             }
+            
+            .league-tags {
+                gap: 5px;
+            }
+            
+            .league-tag {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">MM<span>FOOTY</span></a>
+            <a href="https://www.mmfooty.com/" class="logo">MM<span>FOOTY</span></a>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="#">Live</a>
-                <a href="#">Schedule</a>
-                <a href="#">Leagues</a>
-                <a href="#">Results</a>
-                <a href="#">Streaming</a>
+                <a href="https://www.mmfooty.com/">Home</a>
+                <a href="https://www.mmfooty.com/live">Live</a>
+                <a href="https://www.mmfooty.com/schedule">Schedule</a>
+                <a href="https://www.mmfooty.com/competitions">Competitions</a>
+                <a href="https://www.mmfooty.com/streaming">Streaming</a>
+                <a href="https://www.mmfooty.com/scores">Scores</a>
             </nav>
         </div>
     </header>
     
     <!-- BREADCRUMB SEO -->
     <div class="breadcrumb">
-        <a href="index.html">Home</a> › <a href="#">Premier League</a> › <span>Live Streaming</span>
+        <a href="https://www.mmfooty.com/">Home</a> › <a href="https://www.mmfooty.com/live">Live Football</a> › <span>All Competitions Streaming</span>
     </div>
     
     <div class="container">
@@ -379,48 +489,119 @@
                 </div>
             </div>
             
+            <!-- League Tags -->
+            <div class="league-tags">
+                <a href="#premier-league" class="league-tag pl-tag">Premier League</a>
+                <a href="#champions-league" class="league-tag cl-tag">Champions League</a>
+                <a href="#la-liga" class="league-tag laliga-tag">La Liga</a>
+                <a href="#serie-a" class="league-tag seriea-tag">Serie A</a>
+                <a href="#bundesliga" class="league-tag bundesliga-tag">Bundesliga</a>
+                <a href="#ligue-1" class="league-tag ligue1-tag">Ligue 1</a>
+                <a href="#world-cup" class="league-tag worldcup-tag">World Cup</a>
+                <a href="#europa" class="league-tag">Europa League</a>
+                <a href="#copa" class="league-tag">Copa America</a>
+                <a href="#afcon" class="league-tag">AFCON</a>
+                <a href="#mls" class="league-tag">MLS</a>
+                <a href="#asian" class="league-tag">Asian Cup</a>
+            </div>
+            
             <!-- Simple Live Streaming Schedule -->
             <div class="simple-schedule">
-                <h2>Today's Premier League Live Matches</h2>
+                <h1>Live Football Streaming All Competitions - Today's Matches</h1>
+                
+                <div class="featured-info">
+                    <h3>📺 Watch Live Football From Every Competition</h3>
+                    <p>Stream football matches live from ALL competitions worldwide. Premier League, Champions League, La Liga, Serie A, Bundesliga, World Cup qualifiers, domestic cups, and international tournaments - all available with free streaming links.</p>
+                </div>
+                
+                <h2>Today's Live Football Matches</h2>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">Manchester United vs Liverpool</div>
-                        <div class="match-time">Sunday, 15:00 GMT | Old Trafford</div>
+                        <div class="team-names">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League: Manchester City vs Arsenal</div>
+                        <div class="match-time">Today, 16:30 GMT | Etihad Stadium | Title Decider</div>
                     </div>
-                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
+                    <a href="https://www.mmfooty.com/live/man-city-arsenal" class="live-here-btn">WATCH LIVE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">Arsenal vs Chelsea</div>
-                        <div class="match-time">Sunday, 17:30 GMT | Emirates Stadium</div>
-                    </div>arsenal-chelsea-live
-                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
+                        <div class="team-names">🇪🇸 La Liga: Real Madrid vs Barcelona (El Clásico)</div>
+                        <div class="match-time">Today, 20:00 GMT | Santiago Bernabéu | Live Stream</div>
+                    </div>
+                    <a href="https://www.mmfooty.com/live/el-clasico" class="live-here-btn">WATCH LIVE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">Manchester City vs Tottenham</div>
-                        <div class="match-time">Today, 20:00 GMT | Etihad Stadium</div>
+                        <div class="team-names">🇪🇺 Champions League: Bayern Munich vs PSG</div>
+                        <div class="match-time">Today, 21:00 GMT | Allianz Arena | Quarter-Final</div>
                     </div>
-                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
+                    <a href="https://www.mmfooty.com/live/bayern-psg" class="live-here-btn">WATCH LIVE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">Newcastle vs Aston Villa</div>
-                        <div class="match-time">Tomorrow, 15:00 GMT | St James' Park</div>
+                        <div class="team-names">🇮🇹 Serie A: AC Milan vs Inter Milan (Derby della Madonnina)</div>
+                        <div class="match-time">Tomorrow, 19:45 GMT | San Siro | Derby Match</div>
                     </div>
-                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
+                    <a href="https://www.mmfooty.com/live/milan-inter" class="live-here-btn">WATCH LIVE</a>
                 </div>
                 
                 <div class="simple-match">
                     <div class="match-info">
-                        <div class="team-names">West Ham vs Brighton</div>
-                        <div class="match-time">Tomorrow, 15:00 GMT | London Stadium</div>
+                        <div class="team-names">🇩🇪 Bundesliga: Borussia Dortmund vs Bayern Munich</div>
+                        <div class="match-time">Tomorrow, 17:30 GMT | Signal Iduna Park | Der Klassiker</div>
                     </div>
-                    <a href="https://www.mmfooty.com/sports1" class="live-here-btn">LIVE HERE</a>
+                    <a href="https://www.mmfooty.com/live/dortmund-bayern" class="live-here-btn">WATCH LIVE</a>
+                </div>
+                
+                <div class="simple-match">
+                    <div class="match-info">
+                        <div class="team-names">🇫🇷 Ligue 1: Paris Saint-Germain vs Marseille (Le Classique)</div>
+                        <div class="match-time">Tomorrow, 20:00 GMT | Parc des Princes | Live Stream</div>
+                    </div>
+                    <a href="https://www.mmfooty.com/live/psg-marseille" class="live-here-btn">WATCH LIVE</a>
+                </div>
+            </div>
+            
+            <!-- Competition Grid -->
+            <div class="competition-grid">
+                <div class="competition-card">
+                    <h4>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</h4>
+                    <p>380 matches/season</p>
+                    <p>Live & Free</p>
+                    <a href="#premier-league" class="live-here-btn" style="padding: 5px 10px; font-size: 12px; margin-top: 10px;">WATCH</a>
+                </div>
+                <div class="competition-card">
+                    <h4>🇪🇺 Champions League</h4>
+                    <p>125 matches</p>
+                    <p>Group to Final</p>
+                    <a href="#champions-league" class="live-here-btn" style="padding: 5px 10px; font-size: 12px; margin-top: 10px;">WATCH</a>
+                </div>
+                <div class="competition-card">
+                    <h4>🇪🇸 La Liga</h4>
+                    <p>380 matches/season</p>
+                    <p>El Clásico Live</p>
+                    <a href="#la-liga" class="live-here-btn" style="padding: 5px 10px; font-size: 12px; margin-top: 10px;">WATCH</a>
+                </div>
+                <div class="competition-card">
+                    <h4>🇮🇹 Serie A</h4>
+                    <p>380 matches/season</p>
+                    <p>Derby matches</p>
+                    <a href="#serie-a" class="live-here-btn" style="padding: 5px 10px; font-size: 12px; margin-top: 10px;">WATCH</a>
+                </div>
+                <div class="competition-card">
+                    <h4>🇩🇪 Bundesliga</h4>
+                    <p>306 matches/season</p>
+                    <p>Free streams</p>
+                    <a href="#bundesliga" class="live-here-btn" style="padding: 5px 10px; font-size: 12px; margin-top: 10px;">WATCH</a>
+                </div>
+                <div class="competition-card">
+                    <h4>🇫🇷 Ligue 1</h4>
+                    <p>380 matches/season</p>
+                    <p>PSG & more</p>
+                    <a href="#ligue-1" class="live-here-btn" style="padding: 5px 10px; font-size: 12px; margin-top: 10px;">WATCH</a>
                 </div>
             </div>
             
@@ -444,60 +625,178 @@
             
             <!-- Article Content -->
             <div class="article-content">
-                <h2>Premier League Live Streaming Guide 2024</h2>
-                <p>
-                    The Premier League continues to be the most watched football league in the world, with millions of fans tuning in each week to follow their favorite teams. With the 2024 season underway, fans have more options than ever to watch matches live, whether through traditional television broadcasts or modern streaming services. In the UK, Sky Sports, BT Sport, and Amazon Prime Video share broadcasting rights, while international viewers can access matches through various platforms like NBC Sports in the US, DAZN in multiple countries, and beIN Sports in the Middle East.
-                </p>
-                <p>
-                    Streaming technology has revolutionized how fans consume Premier League content. Most broadcasters now offer high-definition streams, multi-angle views, and expert commentary through their digital platforms. Many services also provide match highlights, in-depth analysis, and exclusive interviews with players and managers. For the best viewing experience, ensure you have a stable internet connection and check local blackout restrictions that may apply to certain matches in your region.
-                </p>
+                <h2 id="premier-league">Live Premier League Streaming</h2>
+                <p>Watch <strong>Premier League live streaming</strong> for all 380 matches each season. From the opening weekend in August to the final day in May, stream every match featuring Manchester City, Liverpool, Arsenal, Chelsea, Manchester United, Tottenham, and all 20 Premier League clubs. Coverage includes Saturday 3pm kickoffs, Sunday matches, Monday Night Football, and midweek fixtures.</p>
+                
+                <h2 id="champions-league">UEFA Champions League Live</h2>
+                <p><strong>Champions League live streaming</strong> covers the entire tournament from group stages through to the final. Watch Europe's elite clubs compete for the most prestigious trophy in club football. Stream matches featuring Real Madrid, Barcelona, Bayern Munich, Manchester City, PSG, and other top European teams. Includes pre-match analysis, live commentary, and post-match highlights.</p>
+                
+                <h2 id="la-liga">La Liga Spanish Football</h2>
+                <p><strong>La Liga live streaming</strong> brings you every match from Spain's top division. Watch El Clásico (Real Madrid vs Barcelona), Madrid Derby, Basque Derby, and all 380 league matches. Stream matches featuring Real Madrid, Barcelona, Atlético Madrid, Sevilla, Valencia, and other La Liga clubs. Experience Spanish football's technical quality and passionate atmosphere.</p>
+                
+                <h2 id="serie-a">Serie A Italian Football</h2>
+                <p><strong>Serie A live streaming</strong> provides coverage of Italy's top division. Watch Derby della Madonnina (Milan vs Inter), Derby d'Italia (Juventus vs Inter), Rome Derby, and all Serie A matches. Stream games featuring Juventus, AC Milan, Inter Milan, Napoli, Roma, Lazio, and other Italian clubs. Enjoy tactical battles and passionate Italian football culture.</p>
+                
+                <h2 id="bundesliga">Bundesliga German Football</h2>
+                <p><strong>Bundesliga live streaming</strong> covers Germany's top division. Watch Der Klassiker (Bayern Munich vs Borussia Dortmund), Rhine Derby, Hamburg Derby, and all 306 Bundesliga matches. Stream matches featuring Bayern Munich, Borussia Dortmund, RB Leipzig, Bayer Leverkusen, and other German clubs. Experience Bundesliga's famous atmosphere and attacking football.</p>
+                
+                <h2>International Football Streaming</h2>
+                <p><strong>International football live streaming</strong> covers all major tournaments and qualifiers:</p>
+                
+                <ul>
+                    <li><strong>FIFA World Cup:</strong> All 64 matches during tournament years</li>
+                    <li><strong>European Championship:</strong> UEFA Euro tournament matches</li>
+                    <li><strong>Copa America:</strong> South American championship</li>
+                    <li><strong>African Cup of Nations:</strong> AFCON tournament</li>
+                    <li><strong>Asian Cup:</strong> Asian football championship</li>
+                    <li><strong>World Cup Qualifiers:</strong> All confederation qualifiers</li>
+                    <li><strong>UEFA Nations League:</strong> European national teams competition</li>
+                </ul>
+                
+                <h2>Domestic Cup Competitions</h2>
+                <p>Stream all major domestic cup competitions worldwide:</p>
+                
+                <ul>
+                    <li><strong>FA Cup:</strong> England's oldest football competition</li>
+                    <li><strong>EFL Cup:</strong> English League Cup (Carabao Cup)</li>
+                    <li><strong>Copa del Rey:</strong> Spanish King's Cup</li>
+                    <li><strong>Coppa Italia:</strong> Italian Cup</li>
+                    <li><strong>DFB-Pokal:</strong> German Cup</li>
+                    <li><strong>Coupe de France:</strong> French Cup</li>
+                    <li><strong>FA Community Shield:</strong> English season opener</li>
+                </ul>
+                
+                <h2>How to Watch All Football Competitions</h2>
+                <p>Follow these steps to access <strong>live football streaming for all competitions</strong>:</p>
+                
+                <ol>
+                    <li>Visit MMFOOTY's live streaming page</li>
+                    <li>Select your desired competition from the menu</li>
+                    <li>Choose the specific match you want to watch</li>
+                    <li>Click the "WATCH LIVE" button for your selected match</li>
+                    <li>Follow any on-screen instructions if prompted</li>
+                    <li>Adjust stream quality based on your internet connection</li>
+                    <li>Enjoy live football from anywhere in the world</li>
+                </ol>
+                
+                <h2>Streaming Quality and Reliability</h2>
+                <p>We provide multiple streaming options for each match to ensure reliability:</p>
+                
+                <ul>
+                    <li><strong>HD Streams:</strong> 720p and 1080p options available</li>
+                    <li><strong>Multiple Links:</strong> Backup streams for popular matches</li>
+                    <li><strong>Language Options:</strong> English commentary plus other languages</li>
+                    <li><strong>Minimal Buffering:</strong> Optimized streams for smooth viewing</li>
+                    <li><strong>Mobile Optimization:</strong> Works on all devices and screen sizes</li>
+                </ul>
+                
+                <div class="featured-info">
+                    <h3>📱 Watch on Any Device</h3>
+                    <p>Our <strong>live football streaming platform</strong> works perfectly on all devices: Windows & Mac computers, iOS & Android smartphones, tablets, Smart TVs, and gaming consoles. No special apps required - just use your web browser for instant access to all football competitions.</p>
+                </div>
+                
+                <h2>Legal Streaming Alternatives</h2>
+                <p>While we provide free streaming options, here are official services for each competition:</p>
+                
+                <ul>
+                    <li><strong>Premier League:</strong> Sky Sports, BT Sport, Amazon Prime (UK), NBC Sports (US)</li>
+                    <li><strong>Champions League:</strong> BT Sport (UK), CBS Sports (US), DAZN (selected regions)</li>
+                    <li><strong>La Liga:</strong> ESPN+ (US), LaLigaTV (UK), beIN Sports</li>
+                    <li><strong>Serie A:</strong> Paramount+ (US), BT Sport (UK)</li>
+                    <li><strong>Bundesliga:</strong> ESPN+ (US), Sky Sports (Germany)</li>
+                    <li><strong>International:</strong> FIFA+, UEFA.tv, official broadcaster websites</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                <p><strong>Live football streaming all competitions</strong> is now accessible to fans worldwide. Whether you follow Premier League, Champions League, La Liga, Serie A, Bundesliga, international tournaments, or domestic cups, you can watch every match live through our platform. With multiple streaming links, HD quality, and coverage of every major competition, football fans never have to miss a moment of the action.</p>
+                
+                <p>Bookmark this page for daily updated schedules and streaming links for all football competitions. Check back regularly for the latest match schedules, team news, and streaming availability for every competition worldwide.</p>
             </div>
+            
         </div>
         
         <!-- SIDEBAR -->
         <div class="sidebar">
             <!-- Sidebar Ad 1 -->
-<div class="ads">
+            <div class="ads">
                 <div class="ad-unit" style="height:300px;padding-top:130px;">
-                    Sidebar Ad Slot (300px)
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1555037532758037"
+     crossorigin="anonymous"></script>
+<!-- mm sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1555037532758037"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 </div>
             </div>
             
-            <!-- Upcoming Matches Widget -->
+            <!-- Top Competitions Widget -->
             <div class="sidebar-widget">
-                <h3>Upcoming Matches</h3>
+                <h3>Top Competitions</h3>
                 <div class="upcoming-match">
-                    <strong>Newcastle vs Aston Villa</strong><br>
-                    <small>Tomorrow, 15:00 GMT</small>
+                    <a href="#premier-league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League Live</a>
                 </div>
                 <div class="upcoming-match">
-                    <strong>West Ham vs Brighton</strong><br>
-                    <small>Tomorrow, 15:00 GMT</small>
+                    <a href="#champions-league">🇪🇺 Champions League Stream</a>
                 </div>
                 <div class="upcoming-match">
-                    <strong>Fulham vs Wolves</strong><br>
-                    <small>Tomorrow, 15:00 GMT</small>
+                    <a href="#la-liga">🇪🇸 La Liga Streaming</a>
                 </div>
                 <div class="upcoming-match">
-                    <strong>Everton vs Nottingham</strong><br>
-                    <small>Tomorrow, 15:00 GMT</small>
+                    <a href="#serie-a">🇮🇹 Serie A Live</a>
+                </div>
+                <div class="upcoming-match">
+                    <a href="#bundesliga">🇩🇪 Bundesliga Free</a>
+                </div>
+                <div class="upcoming-match">
+                    <a href="#world-cup">🌍 World Cup 2026</a>
                 </div>
             </div>
             
-            <!-- Top Leagues Widget -->
+            <!-- Today's Matches Widget -->
             <div class="sidebar-widget">
-                <h3>Top Leagues</h3>
+                <h3>Live Now</h3>
                 <div class="upcoming-match">
-                    <a href="https://www.mmfooty.com/la-liga">La Liga Live</a>
+                    <strong>Man City vs Arsenal</strong><br>
+                    <small>Premier League | LIVE</small>
                 </div>
                 <div class="upcoming-match">
-                    <a href="https://www.mmfooty.com/serie-a">Serie A Streaming</a>
+                    <strong>Real Madrid vs Barcelona</strong><br>
+                    <small>La Liga | 20:00 GMT</small>
                 </div>
                 <div class="upcoming-match">
-                    <a href="https://www.mmfooty.com/bundesliga">Bundesliga Matches</a>
+                    <strong>Bayern vs PSG</strong><br>
+                    <small>Champions League | 21:00 GMT</small>
                 </div>
                 <div class="upcoming-match">
-                    <a href="https://www.mmfooty.com/champions-league">Champions League</a>
+                    <strong>Milan vs Inter</strong><br>
+                    <small>Serie A | Tomorrow</small>
+                </div>
+            </div>
+            
+            <!-- Upcoming Tournaments -->
+            <div class="sidebar-widget">
+                <h3>Upcoming Tournaments</h3>
+                <div class="upcoming-match">
+                    <strong>UEFA Euro 2024</strong><br>
+                    <small>June 14 - July 14</small>
+                </div>
+                <div class="upcoming-match">
+                    <strong>Copa America 2024</strong><br>
+                    <small>June 20 - July 14</small>
+                </div>
+                <div class="upcoming-match">
+                    <strong>Champions League Final</strong><br>
+                    <small>June 1, 2024</small>
+                </div>
+                <div class="upcoming-match">
+                    <strong>World Cup 2026</strong><br>
+                    <small>June 11 - July 19</small>
                 </div>
             </div>
             
@@ -507,9 +806,10 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a> | <a href="#">Contact</a>
+                <a href="https://www.mmfooty.com/privacy">Privacy Policy</a> | <a href="https://www.mmfooty.com/disclaimer">Disclaimer</a> | <a href="https://www.mmfooty.com/contact">Contact</a> | <a href="https://www.mmfooty.com/dmca">DMCA</a>
             </div>
-            <p style="margin-top:15px;">© 2024 MMFOOTY – All Rights Reserved</p>
+            <p style="margin-top:15px;font-size:12px;">Disclaimer: MMFOOTY is a football information portal. We do not host or stream any video content directly. We provide links to third-party streaming platforms. Always respect copyright laws and consider official streaming services when available.</p>
+            <p style="margin-top:15px;">© 2025 MMFOOTY – Live Football Streaming All Competitions</p>
         </div>
     </footer>
     
@@ -523,19 +823,19 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://yourwebsite.com/"
+                "item": "https://www.mmfooty.com/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Premier League",
-                "item": "https://yourwebsite.com/premier-league/"
+                "name": "Live Football",
+                "item": "https://www.mmfooty.com/live"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Live Streaming",
-                "item": "https://yourwebsite.com/premier-league/live-streaming/"
+                "name": "All Competitions Streaming",
+                "item": "https://www.mmfooty.com/live/all-competitions"
             }
         ]
     }
@@ -544,17 +844,105 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SportsEvent",
-        "name": "Manchester United vs Liverpool",
-        "startDate": "2024-01-15T15:00",
-        "endDate": "2024-01-15T17:00",
-        "location": {
-            "@type": "Place",
-            "name": "Old Trafford"
+        "@type": "Article",
+        "headline": "Live Football Streaming All Competitions - Watch Every Match Online Free 2025",
+        "description": "Watch live football streaming from all competitions worldwide: Premier League, Champions League, La Liga, Serie A, Bundesliga, World Cup, Copa America, AFCON & more. Free HD streams available.",
+        "author": {
+            "@type": "Organization",
+            "name": "MMFOOTY"
         },
-        "description": "Premier League match between Manchester United and Liverpool",
-        "eventStatus": "https://schema.org/EventScheduled"
+        "publisher": {
+            "@type": "Organization",
+            "name": "MMFOOTY",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.mmfooty.com/images/logo.png"
+            }
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.mmfooty.com/live/all-competitions"
+        }
     }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What football competitions can I watch live?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can watch live streaming of ALL major football competitions including Premier League, Champions League, La Liga, Serie A, Bundesliga, Ligue 1, World Cup, European Championship, Copa America, AFCON, domestic cups, and international qualifiers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the football streaming really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide free access to live football streams for all competitions. No subscription or payment is required to watch matches from Premier League, Champions League, and other competitions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What devices can I use to watch live football?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our live football streaming works on all devices: Windows and Mac computers, iOS and Android smartphones and tablets, Smart TVs, gaming consoles, and any device with a modern web browser."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you have streams for international tournaments?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide live streaming for all international football tournaments including World Cup, European Championship, Copa America, African Cup of Nations, Asian Cup, and all qualifying matches."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many matches can I watch per day?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can watch unlimited football matches from all competitions. On busy days (weekends, Champions League nights), you can access 10-20+ live matches across different competitions and time zones."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Update year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('footer p:last-child');
+            if(yearElement) {
+                const currentYear = new Date().getFullYear();
+                yearElement.textContent = yearElement.textContent.replace('2025', currentYear);
+            }
+        });
     </script>
 </body>
 </html>
