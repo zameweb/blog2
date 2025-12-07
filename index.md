@@ -16,12 +16,26 @@ breadcrumb:
 <h2>Featured Football Leagues</h2>
 
 <div class="league-list">
-    {% for league in site.data.leagues %}
     <div class="league-item">
-        <span>{{ league.name }}</span>
-        <a href="{{ league.view_url }}" class="view-button">View</a>
+        <span>Premier League</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
     </div>
-    {% endfor %}
+    <div class="league-item">
+        <span>La Liga</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>Serie A</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>UEFA Champions League</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
+    <div class="league-item">
+        <span>UEFA Europa League</span>
+        <a href="https://www.mmfooty.com/live" class="view-button">View</a>
+    </div>
 </div>
 
 <!-- Middle Ad -->
