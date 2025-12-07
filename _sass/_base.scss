@@ -1,0 +1,35 @@
+/* RESET & BASE STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #e63946;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #c1121f;
+    }
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
