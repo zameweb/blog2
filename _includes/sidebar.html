@@ -1,28 +1,14 @@
-<!-- Sidebar Ad 1 -->
-<div class="ads">
-    <div class="ad-unit" style="height:300px;padding-top:130px;">
-        {% if site.adsense_client %}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}"
-            crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="{{ site.adsense_client }}"
-            data-ad-slot="1234567890"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        {% endif %}
-    </div>
-</div>
-
-<!-- Popular Leagues Widget -->
 <div class="sidebar-widget">
     <h3>Popular Leagues</h3>
     {% for league in site.data.leagues %}
     <div class="upcoming-match">
-        <a href="{{ league.url }}">{{ league.name }}</a>
+        <a href="{{ league.view_url }}">{{ league.name }}</a>
     </div>
     {% endfor %}
+</div>
+
+<div class="ads">
+    <div class="ad-unit" style="height:300px;padding-top:130px;">
+        Sidebar Ad Slot (300px)
+    </div>
 </div>
