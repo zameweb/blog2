@@ -1,25 +1,27 @@
-title: MMFOOTY - Football Schedule & Live Streaming
-description: Today's football schedule with live match times, official streaming links, and updated scores
+title: "MMFOOTY - Today's Football Schedule"
+description: "Today's football schedule with live match times, official streaming links, and updated scores"
 baseurl: ""
 url: "https://www.mmfooty.com"
-lang: en
+lang: "en"
 
-# Theme settings
-theme: mmfooty-theme
-logo: /assets/images/logo.png
+# SEO Settings
+author: "MMFOOTY Team"
+twitter_username: "@mmfooty"
+github_username: "mmfooty"
+facebook_app_id: ""
+google_analytics: ""
 
-# Navigation
-navigation:
-  - title: Live
-    url: /live
-  - title: Schedule
-    url: /schedule
-  - title: Leagues
-    url: /leagues
-  - title: Results
-    url: /results
-  - title: Streaming
-    url: /streaming
+# Build settings
+markdown: kramdown
+permalink: pretty
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  pages:
+    output: true
 
 # Defaults
 defaults:
@@ -27,18 +29,51 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout: "page"
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
 
-# Plugins
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# Site navigation (can be overridden by _data/navigation.yml)
+navigation:
+  - title: "Live"
+    url: "/live"
+  - title: "Schedule"
+    url: "/schedule"
+  - title: "Leagues"
+    url: "/leagues"
+  - title: "Results"
+    url: "/results"
+  - title: "Streaming"
+    url: "/streaming"
 
-# SEO
-google_analytics: UA-XXXXXXXXX-X
-adsense_client: ca-pub-1555037532758037
+# League data
+leagues:
+  - name: "Premier League"
+    slug: "premier-league"
+    view_url: "/live"
+    featured: true
+  - name: "La Liga"
+    slug: "la-liga"
+    view_url: "/live"
+    featured: true
+  - name: "Serie A"
+    slug: "serie-a"
+    view_url: "/live"
+    featured: true
+  - name: "UEFA Champions League"
+    slug: "champions-league"
+    view_url: "/live"
+    featured: true
+  - name: "UEFA Europa League"
+    slug: "europa-league"
+    view_url: "/live"
+    featured: true
+
+# Social Media
+social:
+  twitter: "https://twitter.com/mmfooty"
+  facebook: "https://facebook.com/mmfooty"
+  instagram: "https://instagram.com/mmfooty"
